@@ -14,13 +14,13 @@ variable "ami" {
 }
 
 variable "instance_type" {
-  description = "The type of EC2 Instances to run (e.g. t2.micro)"
+  description = "The type of EC2 Instances to run (e.g. t3.micro)"
   type        = string
   # An example of how to enforce business constraints using a validation block.
   # Here, we limit the instance type to those in the AWS Free Tier.
   validation {
-    condition     = contains(["t2.micro", "t3.micro"], var.instance_type)
-    error_message = "This module only allows free tier instance types: t2.micro | t3.micro."
+    condition     = contains(["t3.micro", "t3.micro"], var.instance_type)
+    error_message = "This module only allows free tier instance types: t3.micro | t3.micro."
   }
 }
 

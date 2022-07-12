@@ -14,12 +14,12 @@ variable "ami" {
 }
 
 variable "instance_type" {
-  description = "The type of EC2 Instances to run (e.g. t2.micro)"
+  description = "The type of EC2 Instances to run (e.g. t3.micro)"
   type        = string
 
   validation {
-    condition     = contains(["t2.micro", "t3.micro"], var.instance_type)
-    error_message = "Only free tier is allowed: t2.micro | t3.micro."
+    condition     = contains(["t3.micro", "t3.micro"], var.instance_type)
+    error_message = "Only free tier is allowed: t3.micro | t3.micro."
   }
 }
 

@@ -19,7 +19,7 @@ variable "db_remote_state_key" {
 }
 
 variable "instance_type" {
-  description = "The type of EC2 Instances to run (e.g. t2.micro)"
+  description = "The type of EC2 Instances to run (e.g. t3.micro)"
   type        = string
 }
 
@@ -46,7 +46,7 @@ variable "enable_autoscaling" {
 variable "ami" {
   description = "The AMI to run in the cluster"
   type        = string
-  default     = "ami-0fb653ca2d3203ac1"
+  default     = "ami-0bf69afb300c322eb"
 }
 
 variable "server_text" {

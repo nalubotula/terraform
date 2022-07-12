@@ -44,9 +44,9 @@ variable "ami" {
 }
 
 variable "instance_type" {
-  description = "The type of EC2 Instances to run (e.g. t2.micro)"
+  description = "The type of EC2 Instances to run (e.g. t3.micro)"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "server_text" {

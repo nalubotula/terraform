@@ -15,7 +15,7 @@ terraform {
 
     # bucket         = "<YOUR S3 BUCKET>"
     # key            = "<SOME PATH>/terraform.tfstate"
-    # region         = "us-east-2"
+    # region         = "me-south-1"
     # dynamodb_table = "<YOUR DYNAMODB TABLE>"
     # encrypt        = true
 
@@ -23,13 +23,13 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0fb653ca2d3203ac1"
+  ami           = "ami-0bf69afb300c322eb"
 
-  instance_type = terraform.workspace == "default" ? "t2.medium" : "t2.micro"
+  instance_type = terraform.workspace == "default" ? "t2.medium" : "t3.micro"
 
 }
 

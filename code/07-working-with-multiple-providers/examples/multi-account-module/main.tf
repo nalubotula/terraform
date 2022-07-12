@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
   alias  = "parent"
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
   alias  = "child"
 
   assume_role {

@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 module "webserver_cluster" {

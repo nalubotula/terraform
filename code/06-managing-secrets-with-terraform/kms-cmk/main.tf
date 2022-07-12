@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 # Create a KMS Customer Managed Key (CMK)

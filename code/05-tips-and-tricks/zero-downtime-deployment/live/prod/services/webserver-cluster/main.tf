@@ -10,13 +10,13 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 module "webserver_cluster" {
   source = "../../../../modules/services/webserver-cluster"
 
-  ami         = "ami-0fb653ca2d3203ac1"
+  ami         = "ami-0bf69afb300c322eb"
 
   server_text = var.server_text
 

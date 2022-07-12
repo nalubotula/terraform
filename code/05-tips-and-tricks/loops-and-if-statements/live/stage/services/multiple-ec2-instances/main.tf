@@ -10,20 +10,20 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 resource "aws_instance" "example_1" {
   count         = 3
-  ami           = "ami-0fb653ca2d3203ac1"
-  instance_type = "t2.micro"
+  ami           = "ami-0bf69afb300c322eb"
+  instance_type = "t3.micro"
 }
 
 resource "aws_instance" "example_2" {
   count             = length(data.aws_availability_zones.all.names)
   availability_zone = data.aws_availability_zones.all.names[count.index]
-  ami               = "ami-0fb653ca2d3203ac1"
-  instance_type     = "t2.micro"
+  ami               = "ami-0bf69afb300c322eb"
+  instance_type     = "t3.micro"
 }
 
 data "aws_availability_zones" "all" {}

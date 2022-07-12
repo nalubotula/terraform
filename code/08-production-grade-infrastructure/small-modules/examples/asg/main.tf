@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 module "asg" {
@@ -19,7 +19,7 @@ module "asg" {
   cluster_name  = var.cluster_name
 
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   min_size           = 1
   max_size           = 1

@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 module "hello_world_app" {
@@ -22,7 +22,7 @@ module "hello_world_app" {
   db_remote_state_bucket = var.db_remote_state_bucket
   db_remote_state_key    = var.db_remote_state_key
 
-  instance_type      = "t2.micro"
+  instance_type      = "t3.micro"
   min_size           = 2
   max_size           = 2
   enable_autoscaling = false

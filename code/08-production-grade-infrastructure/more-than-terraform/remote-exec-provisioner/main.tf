@@ -14,7 +14,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "me-south-1"
 }
 
 # To make this example easy to try out, we generate a private key in Terraform.
@@ -40,7 +40,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "example" {
   ami                    = data.aws_ami.ubuntu.id
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
   key_name               = aws_key_pair.generated_key.key_name
 

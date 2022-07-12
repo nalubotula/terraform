@@ -12,7 +12,7 @@ dependency "mysql" {
 
 inputs = {
   environment = "prod"
-  ami         = "ami-0fb653ca2d3203ac1"
+  ami         = "ami-0bf69afb300c322eb"
 
   min_size = 2
   max_size = 2
